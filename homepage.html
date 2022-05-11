@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Ordem</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+    <form action="login">
+        <fieldset size="12">
+            <legend id="legend">
+                LOGIN
+            </legend>
+            <div>
+                <label for="usuário">Usuário</label>
+                <input type="text" 
+                id="usuário"
+                placeholder="Bárbara Kerryl"
+                minlength="2"
+                title="Insira seu nome de usuário"
+                required>
+                <br>
+                <br>
+                <label for="senha">Senha</label>
+                <input type="password"
+                id="senha"
+                placeholder="Abc123gh"
+                minlength="8"
+                maxlength="32"
+                title="Mínimo de 8 caractéres e máximo de 32 caractéres"
+                required>
+
+                <input 
+                type="button" 
+                value="Enviar" 
+                id="botão1" 
+                onclick="clicar()">
+            </div> 
+
+        </fieldset>
+    </form>
+
+    <script src="homepage.js"></script>
+</body>
+</html>

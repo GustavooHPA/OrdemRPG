@@ -1,0 +1,43 @@
+:root {
+    font-size: 62.5%;
+
+    --roxo: rgb(95, 38, 160);
+}
+
+body {
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+form {
+    height: 97vh;
+    width: 97vw;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+fieldset {
+    border: double 0.8rem var(--roxo);
+    width: 32rem;
+    height: 10rem;
+
+    text-align: center;
+    font-size: 1.4rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+legend {
+    border: double 0.6rem var(--roxo);
+    font-size: 2.2rem;
+}
+

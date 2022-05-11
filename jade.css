@@ -1,0 +1,634 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --jade: #00A86B;
+    --width: 100rem;
+
+    margin: 0;
+}
+
+
+
+html {
+    /* chrome://flags/#smooth-scrolling */
+    scroll-behavior: smooth;
+  }
+
+html body {
+    width: 97%;
+    height: max-content;
+}
+
+body {
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+    overflow: overlay;
+}
+
+body header {
+    border: solid 0.2rem #00A86B;
+    border-radius: 0.4rem;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: row;
+    width: 97%;
+    height: 6rem;
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
+}
+
+header div#SvgTitle {
+    display: flex;
+    color: black;
+    text-shadow: -0.2rem -0.2rem 0 var(--jade), 0.1rem -0.1rem 0 var(--jade), -0.2rem 0.2rem 0 var(--jade), 0.1rem 0.1rem 0 var(--jade);
+    font-size: 1.2rem
+}
+
+div.Title {
+    display: flex;
+    justify-content: center;
+}
+
+div.MenuButton {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+}
+
+button#OpenMenu {
+    background: transparent;
+    border: none;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    align-items: right;
+}
+
+main {
+    width: 100%;
+}
+
+main img#FotodoJade {
+    border: solid 0.2rem var(--jade);
+    width: 100%;
+    height: 20%;
+}
+
+
+textarea {
+    resize: none;
+    width: 96%;
+}
+
+fieldset.FichaParteUm {
+    width: 100%;
+    border: solid 0.2rem var(--jade);
+    border-radius: 0.8rem;
+    margin-left: -0.1rem;
+    margin-bottom: 0.4rem;
+}
+
+fieldset.AspectosGerais {
+    border: solid 0.2rem var(--jade);
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+fieldset.Inventário {
+    border: solid 0.2rem var(--jade);
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+fieldset.Atributos {
+    border: solid 0.2rem var(--jade);
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+fieldset.Perícias {
+    border: solid 0.2rem var(--jade);
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+fieldset.Combate {
+    border: solid 0.2rem var(--jade);
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+main div.Combate {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.4rem;
+    text-align: center;
+    padding-left: 4rem;
+    gap: 7rem;
+}
+
+main div.CombateParteUm, main div.CombateParteDois, main div.CombateParteTrês, main div.CombateParteQuatro, main div.CombateParteCinco {
+    display: flex;
+    margin-bottom: 1rem;
+    gap: 4rem;
+}
+
+main div.PeríciasParteUm, main div.PeríciasParteDois, main div.PeríciasParteTrês, main div.PeríciasParteQuatro {
+    display: flex;
+    flex-direction: column;
+} 
+
+main div.InventárioParteUm, main div.InventárioParteDois {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+main div.FormParteUm {
+    display: flex;
+    flex-direction: column;
+}
+
+div.InfoJadeMobile {
+    width: 100%;
+    height: 50%;
+    font-size: 1.4rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center top;
+    align-items: center;
+    box-sizing: border-box;
+    border: solid 0.2rem var(--jade);
+
+    margin-top: 1.4rem;
+}
+
+div.InfoJadePC {
+    position: absolute;
+    right: 10000rem;
+}
+
+
+/* MIN 624PX */
+
+
+@media (min-width: 624px) {
+    body {
+        width: 97%;
+        margin-top: 0.4rem;
+    }
+
+    body header {
+        border-radius: 0.4rem;
+        width: 100%;
+        height: 6rem;
+    }
+
+    header div#SvgTitle {
+        display: flex;
+        color: black;
+        text-shadow: -0.2rem -0.2rem 0 var(--jade), 0.1rem -0.1rem 0 var(--jade), -0.2rem 0.2rem 0 var(--jade), 0.1rem 0.1rem 0 var(--jade);
+        font-size: 1.8rem
+    }
+
+    div.Title {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: -1rem;
+    }
+    
+    div.MenuButton {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        right: 2rem;
+        top: 1.5rem;
+    }
+    
+
+    main {
+        width: 100%;
+    }
+    
+    main img#FotodoJade {
+        border: solid 0.2rem var(--jade);
+        width: 100%;
+        height: 20%;
+    }
+
+    main div.InfoJade {
+        width: 97%;
+        height: max-content;
+        font-size: 1.2rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center top;
+        align-items: center;
+        box-sizing: border-box;
+        border: solid 0.2rem var(--jade);
+    }
+
+    div.InfoJade p {
+        margin-inline: 0.4rem;
+    }
+
+    textarea {
+        resize: none;
+        width: 90%;
+    }
+    
+    fieldset.FichaParteUm {
+        width: 100%;
+        border: solid 0.2rem var(--jade);
+        border-radius: 0.8rem;
+        margin-left: -0.1rem;
+        margin-bottom: 0.4rem;
+    }
+    
+    fieldset.AspectosGerais {
+        border: solid 0.2rem var(--jade);
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+    
+    fieldset.Inventário {
+        border: solid 0.2rem var(--jade);
+        font-size: 3rem;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+    
+    fieldset.Atributos {
+        border: solid 0.2rem var(--jade);
+        font-size: 1.6rem;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+    
+    fieldset.Perícias {
+        border: solid 0.2rem var(--jade);
+        font-size: 1.6rem;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+    
+    fieldset.Combate {
+        border: solid 0.2rem var(--jade);
+        font-size: 1.6rem;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+    
+    main div.Combate {
+        display: flex;
+        flex-direction: row;
+        font-size: 1.4rem;
+        text-align: center;
+        padding-left: 8rem;
+        gap: 15rem;
+    }
+    
+    main div.CombateParteUm, main div.CombateParteDois, main div.CombateParteTrês, main div.CombateParteQuatro, main div.CombateParteCinco {
+        display: flex;
+        margin-bottom: 1rem;
+        gap: 4rem;
+    }
+    
+    main div.PeríciasParteUm, main div.PeríciasParteDois, main div.PeríciasParteTrês, main div.PeríciasParteQuatro {
+        display: flex;
+        flex-direction: column;
+    } 
+    
+    main div.InventárioParteUm, main div.InventárioParteDois {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+    }
+    
+    main div.FormParteUm {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+/* MIN 768PX */
+
+
+@media (min-width: 768px) {
+    body {
+        width: 97%;
+        margin: 0.4rem;
+    }
+
+    body header {
+        border-radius: 0.4rem;
+        width: 100%;
+        height: 6rem;
+    }
+
+    header div#SvgTitle {
+        display: flex;
+        color: black;
+        text-shadow: -0.2rem -0.2rem 0 var(--jade), 0.1rem -0.1rem 0 var(--jade), -0.2rem 0.2rem 0 var(--jade), 0.1rem 0.1rem 0 var(--jade);
+        font-size: 3rem
+    }
+
+    div.Title {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: -4rem;
+    }
+    
+    div.MenuButton {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        right: 2rem;
+        top: 1.5rem;
+    }
+
+    main {
+        width: 100%;
+    }
+    
+    main img#FotodoJade {
+        border: solid 0.2rem var(--jade);
+        width: 100%;
+        height: 20%;
+    }
+
+    main div.InfoJade {
+        width: 97%;
+        height: max-content;
+        font-size: 1.2rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center top;
+        align-items: center;
+        box-sizing: border-box;
+        border: solid 0.2rem var(--jade);
+
+    }
+
+    div.InfoJade p {
+        margin-inline: 0.4rem;
+    }
+
+    textarea {
+        resize: none;
+        width: 96%;
+    }
+    
+    fieldset.FichaParteUm {
+        width: 100%;
+        border: solid 0.2rem var(--jade);
+        border-radius: 0.8rem;
+        margin-left: -0.1rem;
+        margin-bottom: 0.4rem;
+    }
+    
+    fieldset.AspectosGerais {
+        border: solid 0.2rem var(--jade);
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+    
+    fieldset.Inventário {
+        border: solid 0.2rem var(--jade);
+        font-size: 3rem;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+    
+    fieldset.Atributos {
+        border: solid 0.2rem var(--jade);
+        font-size: 1.6rem;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+    
+    fieldset.Perícias {
+        border: solid 0.2rem var(--jade);
+        font-size: 1.6rem;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+    
+    fieldset.Combate {
+        border: solid 0.2rem var(--jade);
+        font-size: 1.6rem;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+    
+    main div.Combate {
+        display: flex;
+        flex-direction: row;
+        font-size: 1.4rem;
+        text-align: center;
+        padding-left: 12rem;
+        gap: 40%;
+    }
+    
+    main div.CombateParteUm, main div.CombateParteDois, main div.CombateParteTrês, main div.CombateParteQuatro, main div.CombateParteCinco {
+        display: flex;
+        margin-bottom: 1rem;
+        gap: 4rem;
+    }
+    
+    main div.PeríciasParteUm, main div.PeríciasParteDois, main div.PeríciasParteTrês, main div.PeríciasParteQuatro {
+        display: flex;
+        flex-direction: column;
+    } 
+    
+    main div.InventárioParteUm, main div.InventárioParteDois {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 6rem;
+    }
+    
+    main div.FormParteUm {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+/* MIN 1280PX */
+
+
+
+@media (min-width: 1280px) {
+    body {
+        width: 97%;
+        margin: 0.4rem;
+    }
+
+    body header {
+        border-radius: 0.4rem;
+        width: 100%;
+        height: 6rem;
+    }
+
+    header div#SvgTitle {
+        display: flex;
+        color: black;
+        text-shadow: -0.2rem -0.2rem 0 var(--jade), 0.1rem -0.1rem 0 var(--jade), -0.2rem 0.2rem 0 var(--jade), 0.1rem 0.1rem 0 var(--jade);
+        font-size: 3rem
+    }
+
+    div.Title {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: -4rem;
+    }
+    
+    div.MenuButton {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        right: 5%;
+        top: 1.5rem;
+    }
+
+    main {
+        width: 100%;
+        border: solid 0.2rem var(--jade);
+        border-radius: 0.4rem;
+        padding: 0.6rem;
+        box-sizing: border-box;
+    }
+    
+    main img#FotodoJade {
+        border: solid 0.2rem var(--jade);
+        width: 40rem;
+        height: 44rem;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+    }
+
+    fieldset.FichaParteUm {
+        border: solid var(--jade);
+        width: 60%;
+        padding-left: 2rem;
+    }
+
+    div.FormPum textarea{
+        width: 20rem;
+    }
+
+    fieldset.AspectosGerais {
+        width: max-content;
+        height: max-content;
+    }
+
+    fieldset.Inventário {
+        font-size: 2rem;
+    }
+
+    fieldset.Atributos {
+        font-size: 2rem;
+        width: 6rem;
+        height: max-content;
+        margin-left: -1rem;
+    }
+
+    fieldset.Atributos textarea {
+        width: 10rem;
+        height: 2.2rem;
+    }
+
+    fieldset.Perícias {
+        height: max-content;
+        width: max-content;
+        display: flex;
+        flex-direction: row;
+        gap: 1.2rem;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+    }
+
+    div.Jade {
+        display: flex;
+        flex-direction: column;
+    }
+
+    div.FormPum {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    div.FormPdois {
+        display: flex;
+        flex-direction: row;
+        gap: 0.4rem;
+    }
+
+    div.Combate p {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        font-size: 1.4rem;
+    }
+
+    div.InfoJadePC {
+        width: 40rem;
+        height: 80rem;
+        font-size: 1.4rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center top;
+        align-items: center;
+        box-sizing: border-box;
+        border: solid 0.2rem var(--jade);
+        visibility: visible;
+        margin-top: 1.4rem;
+        position: initial;
+    }
+
+    div.InfoJadeMobile {
+        position: absolute;
+        top: -10000rem;
+    }
+}
