@@ -35,7 +35,7 @@ body header {
     box-sizing: content-box;
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 97%;
     height: 6rem;
     margin-top: 0.5rem;
     margin-bottom: 3rem;
@@ -71,12 +71,12 @@ button#OpenMenu {
 }
 
 main {
-    width: 100%;
+    width: 97%;
 }
 
 main img#FotodoJade {
     border: solid 0.2rem var(--jade);
-    width: 100%;
+    width: 97%;
     height: 20%;
 }
 
