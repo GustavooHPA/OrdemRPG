@@ -87,7 +87,7 @@ textarea {
 }
 
 fieldset.FichaParteUm {
-    width: 100%;
+    width: 97%;
     border: solid 0.2rem var(--jade);
     border-radius: 0.8rem;
     margin-left: -0.1rem;
