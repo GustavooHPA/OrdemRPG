@@ -5,7 +5,7 @@
 :root {
     font-size: 62.5%;
     --jade: #00A86B;
-    --width: 100rem;
+    --width: 97%;
 
     margin: 0;
 }
@@ -17,7 +17,7 @@ html {
     scroll-behavior: smooth;
   }
 
-html body {
+html body.MenuAberto, html body.MenuFechado {
     width: 97%;
     height: max-content;
 }
@@ -53,12 +53,12 @@ div.Title {
     justify-content: center;
 }
 
-div.MenuButton {
+button#OpenMenu {
     display: flex;
     justify-content: center;
     position: absolute;
-    right: 2rem;
-    top: 2rem;
+    right: 4%;
+    top: 2%;
 }
 
 button#OpenMenu {
@@ -70,24 +70,90 @@ button#OpenMenu {
     align-items: right;
 }
 
+body.MenuFechado button.CloseMenu {
+    visibility: hidden;
+    opacity: 0;
+
+    position: absolute;
+    top: -10000rem;
+}
+
+body.MenuAberto {
+    width: 97%;
+}
+
+body.MenuAberto main, body.MenuAberto .InfoJadePC, body.MenuAberto header button#OpenMenu {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: -100000rem;
+}
+
+body.MenuFechado nav {
+    visibility: hidden;
+    opacity: 0;
+
+    position: absolute;
+}
+
+body.MenuAberto nav.Aberto {
+    border: double 0.6rem var(--jade);
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    visibility: visible;
+    opacity: 100%;
+    color: var(--jade);
+    font-size: 2rem;
+    overflow: hidden;
+    z-index: 97;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body.MenuAberto nav.Aberto a {
+    margin-top: 25%;
+    font-size: 3rem;
+    color: var(--jade);
+    text-decoration: none;
+}
+
+body.MenuAberto nav.Aberto a:nth-child(3) {
+    margin-bottom: 45%;
+}
+
+body.MenuAberto button.CloseMenu {
+    visibility: visible;
+    opacity: 100%;
+
+    background-color: transparent;
+    border: none;
+    
+    position: absolute;
+    top: 2%;
+    right: 4%;
+} 
+
 main {
     width: 97%;
 }
 
 main img#FotodoJade {
     border: solid 0.2rem var(--jade);
-    width: 97%;
+    width: 100%;
     height: 20%;
 }
 
 
 textarea {
     resize: none;
-    width: 90%;
+    width: 100%;
 }
 
 fieldset.FichaParteUm {
-    width: 97%;
+    width: 100%;
     border: solid 0.2rem var(--jade);
     border-radius: 0.8rem;
     margin-left: -0.1rem;
@@ -102,7 +168,7 @@ fieldset.AspectosGerais {
 
 fieldset.Inventário {
     border: solid 0.2rem var(--jade);
-    font-size: 2rem;
+    font-size: 1.6rem;
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
@@ -137,6 +203,7 @@ main div.Combate {
     flex-direction: row;
     font-size: 1.4rem;
     text-align: center;
+    box-sizing: border-box;
     padding-left: 4rem;
     gap: 7rem;
 }
@@ -181,7 +248,7 @@ div.InfoJadeMobile {
 
 div.InfoJadePC {
     position: absolute;
-    right: 10000rem;
+    top: -10000rem;
 }
 
 
