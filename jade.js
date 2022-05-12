@@ -4,8 +4,6 @@ function OpenMenu() {
     document.body.classList.remove("MenuFechado")
 
     document.body.classList.add("MenuAberto")
-
-    console.log('PORRA')
 }
 
 function CloseMenu() {
