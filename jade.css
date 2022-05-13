@@ -120,7 +120,7 @@ body.MenuAberto nav.Aberto a {
     text-decoration: none;
 }
 
-body.MenuAberto nav.Aberto a:nth-child(3) {
+body.MenuAberto nav.Aberto a:nth-child(4) {
     margin-bottom: 45%;
 }
 
@@ -592,6 +592,71 @@ div.InfoJadePC {
         right: 5%;
         top: 1.5rem;
     }
+
+    body.MenuFechado button.CloseMenu {
+        visibility: hidden;
+        opacity: 0;
+    
+        position: absolute;
+        top: -10000rem;
+    }
+
+    body.MenuAberto main, body.MenuAberto .InfoJadePC, body.MenuAberto header button#OpenMenu {
+        visibility: visible;
+        opacity: 100;
+        position: static;
+    }
+    
+    
+    body.MenuAberto {
+        width: 97%;
+    }
+    
+    body.MenuFechado nav {
+        visibility: hidden;
+        opacity: 0;
+    
+        position: absolute;
+    }
+    
+    body.MenuAberto nav.Aberto {
+        border: double 0.6rem var(--jade);
+        width: 40rem;
+        height: 100%;
+        visibility: visible;
+        opacity: 100%;
+        color: var(--jade);
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 2.7%;
+    }
+    
+    body.MenuAberto nav.Aberto a {
+        margin-top: 15%;
+        font-size: 3rem;
+        color: var(--jade);
+        text-decoration: none;
+    }
+    
+    body.MenuAberto nav.Aberto a:nth-child(4) {
+        margin-bottom: 35%;
+    }
+    
+    body.MenuAberto button.CloseMenu {
+        visibility: visible;
+        opacity: 100%;
+    
+        background-color: transparent;
+        border: none;
+        
+        position: absolute;
+        top: 2%;
+        right: 4%;
+    } 
 
     main {
         width: 100%;
