@@ -1,0 +1,28 @@
+body {
+    width: 97%;
+    background-color: black;
+    color: white;
+    text-align: center;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  textarea {
+    background-color: rgb(36, 36, 36);
+    color: white;
+    width: 75%;
+    height: 20%;
+    
+    resize: none;
+  }
+  
+  input {
+    background-color: black;
+    color: white;
+    border-color: white;
+    border-radius: 0.6rem;
+  }
